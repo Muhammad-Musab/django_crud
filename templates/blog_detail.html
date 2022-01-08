@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class = "post-entry">
+<h1>{{blog.title}}</h1>
+<h2> Written By: {{blog.author}}<h2>
+<p>{{blog.post}}<p>
+    <h2><a href="{% url 'blog-update' blog.pk %}">Edit</h2></a>
+    <h2><a href="{% url 'blog-delete' blog.pk %}">Delete</h2></a>
+    
+</div>
+{%endblock content%}

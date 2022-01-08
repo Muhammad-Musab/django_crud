@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content%}
+<h2><a href="{%url 'blog-create'%}">CREATE NEW BLOG</a></h2>
+<div class = "post-entry">
+{% for blog in object_list%}
+<h2><a href = "{% url 'detail-page' blog.pk%}">{{blog.title}}</a></h2>
+<p>{{blog.post}}</p>
+{%endfor%}
+</div>
+{%endblock content%}
